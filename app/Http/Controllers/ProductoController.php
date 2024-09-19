@@ -72,7 +72,7 @@ class ProductoController extends Controller
         ]);
     }
 
-    // Eliminar un producto específico
+    // Eliminar un producto específico.
     public function destroy($id)
     {
         $producto = Producto::findOrFail($id);
