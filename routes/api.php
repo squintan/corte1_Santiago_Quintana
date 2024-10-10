@@ -23,6 +23,6 @@ Route::post('productos', [ProductoController::class, 'store']); // Crear un nuev
 Route::get('productos/{id}', [ProductoController::class, 'show']); // Obtener un producto específico
 Route::put('productos/{id}', [ProductoController::class, 'update']); // Actualizar un producto específico
 Route::delete('productos/{id}', [ProductoController::class, 'destroy']); // Eliminar un producto específico
-
+Route::get('productos/{nombre}', [ProductoController::class, 'showName']); // Obtener un producto específico
 
 

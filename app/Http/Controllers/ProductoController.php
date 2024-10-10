@@ -82,4 +82,23 @@ class ProductoController extends Controller
             'message' => 'Producto eliminado con éxito'
         ], 204);
     }
+
+    public function showName($nombre)
+    {
+        $producto = Producto::where('nombre', $nombre)->first();
+
+        if (!$producto) {
+            return response()->json([
+                'message' => 'Producto no encontrado',
+                'status' => 404
+            ], 404);
+        }
+
+        return response()->json([
+            'producto' => $producto,
+            'status' => 200
+        ], 200);
+    }
+
+
 }
