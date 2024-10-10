@@ -10,10 +10,10 @@ class ProductoController extends Controller
     // Obtener todos los productos
     public function index()
     {
-        $productos = Producto::all();
+        $productos = Producto::all()->toArray(); // Convertir a arreglo
         return response()->json([
             'message' => 'Lista de productos',
-            'productos' => $productos
+            'productos' => $productos // Devolver como arreglo
         ]);
     }
 
